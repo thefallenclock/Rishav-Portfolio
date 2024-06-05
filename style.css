@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.portfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: aliceblue;
+}
+.left-container, .right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+    background-color: #262626;
+    width: 70%;
+    padding-left: 3rem;
+}
+.right-container{
+    background-color: #3b7fa6;
+    width: 30%;
+    background: linear-gradient(-45deg,#3b7fa6,#262626 60%);
+}
+.icons{
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.4rem;
+    justify-items: center;
+    align-items: center;
+    gap: 3rem;
+}
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#00ffe5, #9900ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    font-size: 1.8rem;
+    color: azure;
+}
+.content .intro span{
+    color: #3b7fa6;
+}
+.content h1{
+    font-size: 4rem;
+    color: #3b7393;
+}
+.content .details{
+    font-size: 1.3rem;
+    color: rgb(178, 183, 183);
+    max-width: 40rem;
+    margin: 1.1rem 0 3.4rem 0;
+    line-height: 2rem;
+}
+.buttons{
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    margin: 25rem 0 0 8rem;
+    gap: 1.4rem;
+}
+.buttons button{
+    border: .2rem solid #3b7393;
+    font-size: 1.1rem;
+    padding: .7rem 1.4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .28s ease-in-out;
+}
+button:nth-child(1){
+    background-color: #3b7393;
+}
+button:nth-child(2){
+    background-color: transparent;
+    color: #3b7393;
+}
+button:nth-child(1):hover{
+    background-color: transparent;
+    color: #3b7393;
+}
+button:nth-child(2):hover{
+    background-color: #3b7393;
+    color: #262626;
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg,transparent 50%,#262626 50%);
+    width: 38rem;
+}
+.circle:nth-child(2){
+    background: white;
+    width: 30rem;
+    background-image: url("image/Rishav.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    border: .8rem solid white;
+    box-shadow: 
+    0 0 .5rem whitesmoke,
+    inset 0 0 .5rem white,
+    0 0 3rem #3b7393,
+    inset 0 0 3rem #3b7393,
+    0 0 6rem #3b7393,
+    inset 0 0 6rem #3b7393
+    ;
+}
+
