@@ -26,6 +26,7 @@
     text-decoration: none;
     font-size: 1rem;
     color: aliceblue;
+    position: relative;
 }
 .left-container, .right-container{
     height: 100vh;
@@ -50,6 +51,9 @@
     justify-items: center;
     align-items: center;
     gap: 3rem;
+}
+.icons .fa-brands{
+    color: #9bbcc5;
 }
 .icons .fa-brands:hover{
     cursor: pointer;
@@ -124,8 +128,10 @@ button:nth-child(2):hover{
 .circle:nth-child(2){
     background: white;
     width: 30rem;
-    background-image: url("image/Rishav.jpg");
-    background-size: 80%;
+    background-image: url("image/Rishav.png");
+    background-size: 105%;
+    background-position-y: -100px;
+    background-position-x: -20px;
     background-repeat: no-repeat;
     border: .8rem solid white;
     box-shadow: 
@@ -136,5 +142,21 @@ button:nth-child(2):hover{
     0 0 6rem #3b7393,
     inset 0 0 6rem #3b7393
     ;
+}
+.navlist li a::after, .navlist .active::after{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform ease-in-out .35s;
+}
+.navlist li a:hover::after, .navlist .active::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
