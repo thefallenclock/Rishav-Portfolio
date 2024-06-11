@@ -1,72 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-html, body{
-    height: 100%;
-    width: 100%;
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.portfolio-container{
+html, body{
     height: 100%;
     width: 100%;
-    display: flex;
 }
+
 .navlist{
-    display: flex;
-    gap: 3%;
-    height: 14%;
+    padding-right: 10vw;
+    height: 5vw;
     width: 100%;
-    justify-content: center;
+    background-color: #232323;
+    display: flex;
     align-items: center;
-    position: fixed;
+    justify-content: end;
+
 }
-.navlist li{
+.ullist{
+    display: flex;
+    text-transform: uppercase;
+    gap: 3rem;
+}
+.ullist li{
     list-style: none;
 }
-.navlist li a{
+.ullist li a{
     text-decoration: none;
-    font-size: 1rem;
-    color: aliceblue;
+    color: rgb(190, 218, 232);
+    font-weight: 500;
+}
+.page{
+    display: flex;
+    height: calc(100% - 5vw);
     position: relative;
 }
-.left-container, .right-container{
+.left{
     height: 100%;
+    width: 50%;
+    background-color: #232323;
     display: flex;
     align-items: center;
-}
-.left-container{
-    background-color: #262626;
-    width: 70%;
-    padding-left: 3rem;
-}
-.right-container{
-    background-color: #3b7fa6;
-    width: 30%;
-    background: linear-gradient(-45deg,#3b7fa6,#262626 60%);
+    justify-content: start;
+    position: relative;
 }
 .icons{
-    color: beige;
-    display: flex;
-    flex-direction: column;
-    font-size: 2.4rem;
-    justify-items: center;
-    align-items: center;
+    height: 100%;
+    width: 15%;
+    font-size: 2.5rem;
+    padding: 0 0;
     gap: 3rem;
+    background-color: #232323;
+    color: #7391A5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .icons .fa-brands{
     color: #9bbcc5;
 }
-.icons .fa-brands:hover{
+.icons .fa-instagram:hover{
     cursor: pointer;
-    background: linear-gradient(#00ffe5, #9900ff);
+    background: linear-gradient(45deg,#FFA300,#FA3B37,#D00EAB,#802BF6,#B604EE);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.icons .fa-linkedin:hover{
+    cursor: pointer;
+    background: linear-gradient(45deg,#6acbff,#02a6ff,#0290dc,#0274B3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icons .fa-square-x-twitter:hover{
+    cursor: pointer;
+    background: linear-gradient(45deg,#3b3b3b,#1e1e1e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icons .fa-discord:hover{
+    cursor: pointer;
+    background: linear-gradient(45deg,#8e97f3,#616df3,#5865F2,#4e5cf1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.rleft{
+    height: calc(100% - 5vw);
+    width: calc(100% - 15%);
+    box-shadow: 1px 10px 20px #626360;
+}
 .content{
-    margin-left: 4rem;
+    margin-left: 3rem;
+    padding-top: 30px;
 }
 .content .intro{
     font-size: 1.8rem;
@@ -87,17 +119,15 @@ html, body{
     line-height: 2rem;
 }
 .buttons{
-    justify-items: center;
-    align-items: center;
     display: flex;
-    position: fixed;
-    margin: 25rem 0 0 8rem;
+    flex-wrap: wrap;
+    margin: 4rem 0 0 1rem;
     gap: 1.4rem;
 }
 .buttons button{
     border: .2rem solid #3b7393;
     font-size: 1.1rem;
-    padding: .7rem 1.4rem;
+    padding: .7rem 2rem;
     border-radius: 2rem;
     cursor: pointer;
     transition: .28s ease-in-out;
@@ -105,33 +135,45 @@ html, body{
 button:nth-child(1){
     background-color: #3b7393;
 }
-button:nth-child(2){
-    background-color: transparent;
-    color: #3b7393;
-}
 button:nth-child(1):hover{
     background-color: transparent;
     color: #3b7393;
 }
-button:nth-child(2):hover{
-    background-color: #3b7393;
-    color: #262626;
+.right{
+    height: 100%;
+    width: 50%;
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.lright{
+    height: 100%;
+    width: 45%;
+    background-color: #232323;
+}
+.rright{
+    height: 100%;
+    width: 55%;
+    background-color: #386F8F;
+    background: linear-gradient(-45deg,#3b7fa6,#232323 60%);
 }
 .design .circle{
     aspect-ratio: 1;
-    position: absolute;
     border-radius: 50%;
-    top: 50%;
-    left: 70%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
     transform: translate(-50%,-50%);
 }
 .circle:nth-child(1){
-    background: linear-gradient(90deg,transparent 50%,#262626 50%);
-    width: 38rem;
+    background: linear-gradient(90deg,transparent 50%,#232323 50%);
+    width: 34rem;
 }
 .circle:nth-child(2){
     background: white;
-    width: 30rem;
+    width: 28rem;
     background-image: url("image/Rishav.png");
     background-size: 105%;
     background-position-y: -100px;
@@ -147,21 +189,184 @@ button:nth-child(2):hover{
     inset 0 0 6rem #3b7393
     ;
 }
-.navlist li a::after, .navlist .active::after{
-    content: "";
-    position: absolute;
-    background: white;
-    width: 100%;
-    height: .1rem;
-    left: 0;
-    bottom: -5px;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform ease-in-out .35s;
-    
-}
-.navlist li a:hover::after, .navlist .active::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    background: linear-gradient(90deg, #2c81a8, #7f5093) ;
+
+@media (max-width:600px) {
+    .navlist{
+        padding: 1vw;
+        height: 10vh;
+        width: 100%;
+        background-color: #232323;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        box-shadow: -0.1px 0.1px 11px #789b9e inset;
+        position: relative;
+    }
+    .ullist li a{
+        text-decoration: none;
+        color: rgb(190, 218, 232);
+        font-weight: 300;
+    }
+    .page{
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: 200vh;
+        width: 100%;
+        position: ;
+    }
+    .right{
+        padding: 0;
+        margin: 0 0;
+        height: 50%;
+        width: 100%;
+        background-color: #232323;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 1px 1px 20px #789b9e;
+    }
+    .lright{
+        height: 100%;
+        width: 50%;
+        background-color: #232323;
+    }
+    .rright{
+        height: 100%;
+        width: 50%;
+        background-color: #386F8F;
+        background: linear-gradient(-45deg,#3b7fa6,#232323 60%);
+    }
+    .design .circle{
+        aspect-ratio: 1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .circle:nth-child(1){
+        background: linear-gradient(90deg,transparent 50%,#232323 50%);
+        width: 18rem;
+    }
+    .circle:nth-child(2){
+        background: white;
+        width: 14rem;
+        background-image: url("image/Rishav.png");
+        background-size: 105%;
+        background-position-y: -50px;
+        background-position-x: -10px;
+        background-repeat: no-repeat;
+        border: .4rem solid #ffffff;
+        box-shadow: 
+        0 0 .5rem whitesmoke,
+        inset 0 0 .5rem rgb(79, 74, 77),
+        0 0 2rem #2e63f6,
+        inset 0 0 3rem #5888af,
+        0 0 5rem #3b7393,
+        inset 0 0 6rem #3b7393
+        ;
+    }
+    .left{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #232323;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: start;
+        position: relative;
+    }
+    .icons{
+        height: 16vh;
+        width: 100%;
+        font-size: 2.7rem;
+        padding: 5vh 0;
+        margin: 12vh 0;
+        gap: 2rem;
+        background-color: #232323;
+        color: #7391A5;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1.5px 20px #789b9e ;
+    }
+    .icons .fa-brands{
+        color: #9bbcc5;
+    }
+    .icons .fa-instagram:hover{
+        cursor: pointer;
+        background: linear-gradient(45deg,#FFA300,#FA3B37,#D00EAB,#802BF6,#B604EE);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .icons .fa-linkedin:hover{
+        cursor: pointer;
+        background: linear-gradient(45deg,#6acbff,#02a6ff,#0290dc,#0274B3);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .icons .fa-square-x-twitter:hover{
+        cursor: pointer;
+        background: linear-gradient(45deg,#3b3b3b,#1e1e1e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .icons .fa-discord:hover{
+        cursor: pointer;
+        background: linear-gradient(45deg,#8e97f3,#616df3,#5865F2,#4e5cf1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .rleft{
+        height: 70%;
+        width: 100%;
+        box-shadow: 1px 1px 20px #789b9e inset;
+    }
+    .content{
+        height: 100%;
+        width: auto;
+        padding: 8vh 0;
+        padding-right: 5vh;
+    }
+    .content .intro{
+        font-size: 1.2rem;
+        color: azure;
+    }
+    .content .intro span{
+        color: #3b7fa6;
+    }
+    .content h1 span{
+        font-size: 2.4rem;
+        color: #3b7393;
+    }
+    .content .details{
+        font-size: 1rem;
+        color: rgb(178, 183, 183);
+        max-width: 100%;
+        line-height: 1.5rem;
+    }
+    .buttons{
+        position: relative;
+    }
+    .buttons button{
+        border: .2rem solid #3b7393;
+        font-size: 1.1rem;
+        padding: .7rem 2rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: .28s ease-in-out;
+    }
+    button:nth-child(1){
+        background-color: #3b7393;
+    }
+    button:nth-child(1):hover{
+        background-color: transparent;
+        color: #3b7393;
+    }
 }
