@@ -212,7 +212,6 @@ button:nth-child(1):hover{
         flex-direction: column-reverse;
         min-height: 200vh;
         width: 100%;
-        position: ;
     }
     .right{
         padding: 0;
