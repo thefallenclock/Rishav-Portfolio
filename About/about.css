@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #232323;
+    position: relative;
+}
+.nav-bar{
+    width: 100%;
+    height: 5rem;
+    background-color: #3b3b3b;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20rem 0 1rem;
+    box-shadow: 1px 1px 20px #232323 inset;
+}
+.nav-bar h1{
+    color: #387192;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 100;
+    border: 2.5px solid #27759c;
+    background-color: #232323;
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    padding: .3rem 1rem;
+    box-shadow: 4px 5px 10px #232323;
+}
+.nav-bar h1:hover{
+    background-color: #3b3b3b;
+}
+.nav-bar .ri-arrow-left-s-line{
+    color: #387192;
+    font-size: 1.5rem;
+    border: 2.5px solid #27759c;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+    padding: 3px 10px;
+    background-color: #232323;
+    box-shadow: 4px 5px 10px #232323
+    ;
+}
+.ri-arrow-left-s-line:hover{
+    background-color: #3B3B3B;
+}
+.nav-bar .back{
+    text-decoration: none;
+}
+.page{
+    background-color: #232323;
+    width: 100%;
+    height: calc(100% - 5rem);
+    position: relative;
+    display: flex;
+}
+.left{
+    height: 100%;
+    width: 100%;
+    background-color: #232323;
+    position: relative;
+    display: flex;
+}
+.leftl{
+    height: 100%;
+    width: 100%;
+    background-color: #27759c;
+    background: linear-gradient(45deg,#232323,#3b7fa6 100%);
+}
+.leftr{
+    height: 100%;
+    width: 100%;
+    background-color: #232323;
+}
+.design .circle{
+    aspect-ratio: 1;
+    border-radius: 30%;
+    border-top-left-radius: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg,transparent 50%,#232323 50%);
+    width: 34rem;
+}
+.circle:nth-child(2){
+    background: white;
+    width: 28rem;
+    background-image: url("image/Rishav.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: .8rem solid white;
+    box-shadow: 
+    0 0 .5rem whitesmoke,
+    inset 0 0 .5rem rgb(79, 74, 77),
+    0 0 2rem #2e63f6,
+    inset 0 0 3rem #5888af,
+    0 0 5rem #3b7393,
+    inset 0 0 6rem #3b7393
+    ;
+}
+.right{
+    height: 100%;
+    width: 100%;
+    background-color: #212121;
+    box-shadow: 2px 3px 80px #2154834d inset;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    color: silver;
+    height: 35rem;
+    width: 70%;
+    background-color: #3B3B3B;
+    border: none;
+    border-radius: 0 15%;
+    box-shadow: 4px 4px 20px inset;
+    padding: 5rem 3rem 4rem 3rem;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    text-wrap: wrap;
+}
+.card::-webkit-scrollbar{
+    width: 15px;
+}
+.card::-webkit-scrollbar-track{
+    background: whitesmoke;
+}
+.card::-webkit-scrollbar-thumb{
+    background: linear-gradient(#fff,#000);
+    border-radius: 5px;
+}
+
+@media (max-width:600px) {
+    .main{
+        height: 200vh;
+    }
+    .nav-bar{
+        height: 4rem;
+        padding: 1vh 2vh 1vh 2vh;
+    }
+    .nav-bar h1{
+        font-size: 1.5rem;
+    }
+    .page{
+        background-color: #232323;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .left{
+        height: 100vh;
+    }
+    .circle:nth-child(1){
+        width: 22rem;
+    }
+    .circle:nth-child(2){
+        width: 18rem;
+        border: .5rem solid white;
+    }
+    .right{
+        height: 250vh;
+    }
+    .card{
+        height: 50rem;
+        width: 75%;
+        border-radius: 2rem;
+        padding: 2rem 1rem 1rem 1.3rem;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 300;
+        text-wrap: wrap;
+    }
+}
