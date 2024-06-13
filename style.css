@@ -18,7 +18,6 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: end;
-
 }
 .ullist{
     display: flex;
@@ -157,7 +156,7 @@ button:nth-child(1):hover{
     height: 100%;
     width: 55%;
     background-color: #386F8F;
-    background: linear-gradient(-45deg,#3b7fa6,#232323 60%);
+    background: linear-gradient(0deg,#3b7fa6,#232323 30%);
 }
 .design .circle{
     aspect-ratio: 1;
