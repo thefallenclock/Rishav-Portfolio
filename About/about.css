@@ -8,7 +8,52 @@ html, body{
     height: 100%;
     width: 100%;
 }
-
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideinright {
+    0%{
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideinleft {
+    0%{
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slideintop {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes slideinbottom {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 .main{
     height: 100%;
     width: 100%;
@@ -25,6 +70,7 @@ html, body{
     justify-content: space-between;
     padding: 0 20rem 0 1rem;
     box-shadow: 1px 1px 20px #232323 inset;
+    animation: fade 1s ease-in-out 0s backwards;
 }
 .nav-bar h1{
     color: #387192;
@@ -37,6 +83,9 @@ html, body{
     border-top-left-radius: 0;
     padding: .3rem 1rem;
     box-shadow: 4px 5px 10px #232323;
+    animation: fade 1s ease-in-out 1s backwards,
+    slideinright 1s ease-in-out 1s backwards
+    ;
 }
 .nav-bar h1:hover{
     background-color: #3b3b3b;
@@ -50,14 +99,16 @@ html, body{
     border-bottom-left-radius: 30px;
     padding: 3px 10px;
     background-color: #232323;
-    box-shadow: 4px 5px 10px #232323
-    ;
+    box-shadow: 4px 5px 10px #232323;
 }
 .ri-arrow-left-s-line:hover{
     background-color: #3B3B3B;
 }
 .nav-bar .back{
     text-decoration: none;
+    animation: fade 1s ease-in-out 0s backwards,
+    slideinright 1s ease-in-out 0s backwards
+    ;
 }
 .page{
     background-color: #232323;
@@ -65,6 +116,7 @@ html, body{
     height: calc(100% - 5rem);
     position: relative;
     display: flex;
+    animation: fade 1s ease-in-out 0.5s backwards;
 }
 .left{
     height: 100%;
@@ -78,11 +130,17 @@ html, body{
     width: 100%;
     background-color: #27759c;
     background: linear-gradient(45deg,#232323,#3b7fa6 100%);
+    animation: fade 1s ease-in 1s backwards,
+    slideintop 1s ease-in 1s backwards
+    ;
 }
 .leftr{
     height: 100%;
     width: 100%;
     background-color: #232323;
+    animation: fade 1s ease-in 1s backwards,
+    slideinbottom 1s ease-in 1s backwards
+    ;
 }
 .design .circle{
     aspect-ratio: 1;
@@ -92,6 +150,7 @@ html, body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    animation: fade 1s ease-in-out 1.8s backwards;
 }
 .circle:nth-child(1){
     background: linear-gradient(90deg,transparent 50%,#232323 50%);
@@ -136,18 +195,12 @@ html, body{
     font-style: italic;
     font-weight: 300;
     text-wrap: wrap;
+    animation: fade 1s ease-in-out 1.7s backwards;
 }
-.card::-webkit-scrollbar{
-    width: 15px;
+.card p{
+    animation: slideinright 1s ease-in-out 1.7s backwards,
+    fade 1s ease-in 1.7s backwards;
 }
-.card::-webkit-scrollbar-track{
-    background: whitesmoke;
-}
-.card::-webkit-scrollbar-thumb{
-    background: linear-gradient(#fff,#000);
-    border-radius: 5px;
-}
-
 @media (max-width:600px) {
     .main{
         height: 200vh;
