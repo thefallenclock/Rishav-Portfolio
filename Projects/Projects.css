@@ -1,0 +1,157 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+@keyframes scaleup {
+    0%{
+        scale: 1;
+    }
+    80%{
+        scale: 1.15;
+    }
+    100%{
+        scale: 1.13;
+    }
+}
+.main{
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    height: 12vh;
+    width: 100%;
+    background-color: #3b3b3b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+}
+.navbar .ri-arrow-left-s-line{
+    color: #387192;
+    font-size: 1.5rem;
+    border: 2.5px solid #27759c;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+    padding: 3px 10px;
+    background-color: #232323;
+    box-shadow: 4px 5px 10px #232323;
+}
+.navbar .back{
+    text-decoration: none;
+}
+.ri-arrow-left-s-line:hover{
+    background-color: #3B3B3B;
+}
+.navbar h1{
+    color: #387192;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 100;
+    border: 2.5px solid #27759c;
+    background-color: #232323;
+    border-radius: 25px;
+    border-top-left-radius: 0;
+    padding: .3rem 1rem;
+    box-shadow: 4px 5px 10px #232323;
+}
+.navbar h1:hover{
+    background-color: #3b3b3b;
+}
+.page{
+    height: calc(100% - 12vh);
+    width: 100%;
+    background-color: #232323;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+}
+.main-card{
+    background-color: #2f2f2f;
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    border: 6px solid #27759cc4;
+    box-shadow: 1px 10px 25px rgba(23, 116, 116, 0.556),
+    1px 10px 20px rgba(0, 255, 255, 0.358) inset
+    ;
+    padding: 1%;
+    display: flex;
+}
+.card1{
+    height: 46%;
+    width: 32%;
+    background-color: #27759c6e;
+    border-radius: 2.5rem;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card1:hover{
+    animation: scaleup .25s ease 0s forwards;
+}
+.card1 img{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+.pic{
+    object-fit: cover;
+    border-radius: 2.5rem;
+}
+.card2{
+    height: 46%;
+    width: 32%;
+    background-color: #27759c6e;
+    border-radius: 2.5rem;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card2:hover{
+    animation: scaleup .25s ease 0s forwards;
+
+}
+.card2 h3{
+    font-weight: 200;
+    background-color: #27759c8b;
+    box-shadow: 2px 6px;
+    border-radius: 6rem;
+    padding: 2rem;
+}
+.card2 h3:hover{
+    box-shadow: none;
+}
+.card3{
+    height: 46%;
+    width: 32%;
+    background-color: #27759c6e;
+    border-radius: 2.5rem;
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card3:hover{
+    animation: scaleup .25s ease 0s forwards;
+
+}
+.card3 h3{
+    font-weight: 200;
+    background-color: #27759c8b;
+    box-shadow: 2px 6px;
+    border-radius: 6rem;
+    padding: 2rem;
+}
+.card3 h3:hover{
+    box-shadow: none;
+}
